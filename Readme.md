@@ -1,4 +1,4 @@
-Compatibility tester for your domain SSL Cert with older `cacert.pem` CA bundle file.
+Compatibility tester for your domain SSL Cert against older `cacert.pem` CA bundle file.
 # Requirements
 - Docker
 
@@ -11,11 +11,11 @@ Compatibility tester for your domain SSL Cert with older `cacert.pem` CA bundle 
 
 `docker run --rm -it alpinecurl <YOUR CURL COMMAND HERE>`
 
-- A) Example to run Curl using old 2014 cacert:
+- A) Example to run Curl using OLD (2014) cacert against your domain:
     
 `docker run --rm -it alpinecurl curl -v --cacert ./cacert-old.pem https://account.midtrans.com/login`
 
-- B) Example to run Curl using 2019 cacert:
+- B) Example to run Curl using newer (2019) cacert against your domain:
     
 `docker run --rm -it alpinecurl curl -v --cacert ./cacert-2019.pem https://account.midtrans.com/login`
 
